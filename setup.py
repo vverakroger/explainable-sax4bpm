@@ -17,7 +17,7 @@ install_requires = [
 
 setup(
     name="sax4bpm", 
-    version='{{VERSION_PLACEHOLDER}}', 
+    version="0.0.2",
     author="Inna Skarbovsky",
     author_email="inna@il.ibm.com",
     description="Open source Python library for deriving explanations about business processes based on process,causal and XAI perspectives",
