@@ -1,18 +1,19 @@
-import sys
 from setuptools import setup, find_packages
 
-def parse_requirements(filename):
-    try:
-        with open(filename, "r", encoding="utf-8") as fh:
-            return [line.strip() for line in fh if line.strip() and not line.startswith('#')]
-    except Exception as e:
-        print(f"Error reading {filename}: {e}")
-        return []
-    
+
 with open("README.md", "r",encoding="utf-8") as fh:
     long_description = fh.read()
 
-install_requires = parse_requirements("requirements.txt")
+install_requires = [
+    "graphviz>=0.20.3",
+    "lingam>=1.9.0",
+    "networkx>=3.2.1",
+    "numpy>=1.26.4",
+    "pandas>=2.2.2",
+    "pm4py>=2.7.11.12",
+    "scikit-learn>=1.5.1",
+    "scipy>=1.11.4",
+]
 
 setup(
     name="sax4bpm", 
